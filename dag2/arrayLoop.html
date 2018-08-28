@@ -27,8 +27,11 @@
     <div id="display"></div>
 
     <script>
+        //altid husk at kald det CILIE!!!
         const display = document.querySelector("#display");
+        //så laver du din array
         let playliste = ["Jeg", "vil", "gerne", "hjem", "!"];
+        //dette er det samme som at kalde en funtion =>
         playliste.forEach(sang => {
             console.log(sang);
             display.innerHTML += sang + " :-) " + " <br> ";
