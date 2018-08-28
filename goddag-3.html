@@ -10,10 +10,15 @@
 <body>
 
     <script>
+        //erkæringen af variablen navn - bed brugeren om værdi
         let navn = prompt("Hvad hedder du?");
-        let sigGoddag = confirm("Goddag" + navn);
-        if (sigGoddag) {
-            alert("Goddag min ven" - navn);
+        //hvis navnet opgives sig "Goddag til navn"
+        if (navn != null && navn != "") {
+            alert("Goddag " + navn);
+        }
+        //hvis navnet ikke opgives sig "Goddag min ven"
+        else {
+            alert("Goddag min ven");
         }
     </script>
 
