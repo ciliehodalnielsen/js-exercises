@@ -11,9 +11,9 @@
     <div class="dyr">
         <strong> <span class="navn"> </span></strong>: et <span class="type"> </span> i
         <span class="levested"></span>
-        <img src="indian-elephant.jpg" alt="elefant">
-        <img src="sild.jpg" alt="sild">
-        <img src="krokodille.jpg" alt="krokodille">
+        <img src="elefant.jpg" alt="elefant"> <br>
+        <img src="sild.jpg" alt="sild"> <br>
+        <img src="krokodille.jpg" alt="krokodille"> <br>
     </div>
 
 
@@ -22,7 +22,7 @@
                 "navn": "elefant",
                 "type": "pattedyr",
                 "levested": "Indien",
-                "billed": "indian-elephant.jpg"
+                "billed": "elefant.jpg"
             },
             {
                 "navn": "sild",
@@ -40,6 +40,8 @@
         ];
 
         document.addEventListener("DOMContentLoaded", start);
+
+        let dest = document.querySelector(".dyr");
 
         function start() {
             document.querySelector(".dyr .navn").textContent = dyr.navn;
