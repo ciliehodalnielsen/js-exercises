@@ -9,11 +9,6 @@
 
 <body>
     <div class="dyr">
-        <strong> <span class="navn"> </span></strong>: et <span class="type"> </span> i
-        <span class="levested"></span>
-        <img src="elefant.jpg" alt="elefant"> <br>
-        <img src="sild.jpg" alt="sild"> <br>
-        <img src="krokodille.jpg" alt="krokodille"> <br>
     </div>
 
 
@@ -35,22 +30,21 @@
                 "navn": "krokodille",
                 "type": "krybdyr",
                 "levested": "Nilen",
-                "billed": "krokodille"
+                "billed": "krokodille.jpg"
             }
         ];
 
         document.addEventListener("DOMContentLoaded", start);
 
-        let dest = document.querySelector(".dyr");
-
         function start() {
-            document.querySelector(".dyr .navn").textContent = dyr.navn;
-            document.querySelector(".dyr .type").textContent = dyr.type;
-            document.querySelector(".dyr .levested").textContent = dyr.levested;
-            document.querySelector(".dyr img").src = dyr.billed;
-
+            dyr.forEach(animal => {
+                document.querySelector(".dyr").innerHTML +=
+                    "<img src='" + animal.billed + "''> " +
+                    animal.navn + ": " +
+                    animal.type + "fra " +
+                    animal.levested + "<br>";
+            })
         }
-
     </script>
 
 </body>
