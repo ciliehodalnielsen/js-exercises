@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyr øvelse</title>
+</head>
+
+<body>
+    <div class="dyr">
+        <strong> <span class="navn"> </span></strong>: et <span class="type"> </span> i
+        <span class="levested"></span>
+        <img src="indian-elephant.jpg" alt="elefant">
+        <img src="sild.jpg" alt="sild">
+        <img src="krokodille.jpg" alt="krokodille">
+    </div>
+
+
+    <script>
+        let dyr = [{
+                "navn": "elefant",
+                "type": "pattedyr",
+                "levested": "Indien",
+                "billed": "indian-elephant.jpg"
+            },
+            {
+                "navn": "sild",
+                "type": "fisk",
+                "levested": "Nordsøen",
+                "billed": "sild.jpg"
+            },
+
+            {
+                "navn": "krokodille",
+                "type": "krybdyr",
+                "levested": "Nilen",
+                "billed": "krokodille"
+            }
+        ];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            document.querySelector(".dyr .navn").textContent = dyr.navn;
+            document.querySelector(".dyr .type").textContent = dyr.type;
+            document.querySelector(".dyr .levested").textContent = dyr.levested;
+            document.querySelector(".dyr img").src = dyr.billed;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
